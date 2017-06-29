@@ -17,7 +17,7 @@ Este trabalho tem como objetivo mostrar ao aluno que os conhecimentos adquiridos
 Segue abaixo uma lista de possíveis temas de trabalho:
 
 * Mobilidade urbana (sistemas de carona, compartilhamento de transportes, etc.) - **Gustavo, Paulo e Raul**: *Uber + Sedex*
-* Organização e promoção de eventos (Bilheteria, portal de eventos, etc.)
+* Organização e promoção de eventos (Bilheteria, portal de eventos, etc.) - **Francisco, Victor e Ping**: *Organizador de mesas de RPG*
 * Educação & Aprendizado (Plataformas de aprendizado)
 * Causas sociais (Plataformas para gestão de doações)
 
@@ -88,3 +88,22 @@ Contudo, o desenvolvimento do trabalho **deve** englobar, de alguma forma, os se
 ## Composição dos grupos
 
 Os grupos deverão, **obrigatóriamente**, ser compostos por alunos das duas extintas subturmas (103 e 106).
+
+#GameMaster (Organizador de Mesas de RPG)
+
+**Membros do grupo**:
+* Francisco Fabiano
+* Victor Hugo Silva Moura
+* Fernando Luiz
+
+**Proposta:**
+A proposta do projeto é facilitar a montagem de mesas de RPG. Usuários poderão assumir as posições de jogador e de mestre, criando e participando de mesas.
+Vários filtros, incluindo mas não se limitando a perfil do jogador, gênero, horário e local da mesa, serão usados para filtrar as mesas, permitindo aos usuários escolher a melhor para eles.
+
+**Features**
+* Busca filtrada de mesas: veja apenas jogos compatíveis com seus horários e locais
+* Criação flexível de mesas, incluindo hora e local. Chega de cancelamentos!
+* Avaliação de mestres e jogadores. Seja você lawful/neutral ou chaotic/evil, temos uma mesa para você!
+* Perfis de jogador, detalhando as preferências individuais
+* Mesas públicas e privadas. Convide jogadores ou seja encontrado por eles!
+* Sistema de notificações: receba convites e fique ligado nas alterações nas suas mesas
