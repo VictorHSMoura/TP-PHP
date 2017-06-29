@@ -89,7 +89,7 @@ Contudo, o desenvolvimento do trabalho **deve** englobar, de alguma forma, os se
 
 Os grupos deverão, **obrigatóriamente**, ser compostos por alunos das duas extintas subturmas (103 e 106).
 
-#GameMaster (Organizador de Mesas de RPG)
+## Projeto GameMaster (Organizador de Mesas de RPG)
 
 **Membros do grupo**:
 * Francisco Fabiano
