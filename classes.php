@@ -39,14 +39,13 @@ class Mesa {
         $this->sinopse = $faker->text;
         $this->genero = $faker->name;
         $this->sistema = $faker->name;
-        $this->mostraMesa();
     }
 
-    function mostraMesa(){ //Exibição resumida da mesa: apenas nome, endereço e sinopse
+    function mostraMesa($mesa){ //Exibição resumida da mesa: apenas nome, endereço e sinopse
         ?>
-        <h3><?=$this->nome?></h3>
-        <p><strong>Endereço: </strong><?=$this->endereco?></p>
-        <p><?=$this->sinopse?></p>
+        <h3><?=$mesa->nome?></h3>
+        <p><strong>Endereço: </strong><?=$mesa->endereco?></p>
+        <p><?=$mesa->sinopse?></p>
         <?php
     }
 }

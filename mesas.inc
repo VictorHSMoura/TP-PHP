@@ -11,7 +11,23 @@ function listaMesas(){
     while(!feof($arquivo)) $json .= fgets($arquivo);
     fclose($arquivo);
     $todasAsMesas = json_decode($json);
-    echo $todasAsMesas[0];
-    foreach ($mesinha as $todasAsMesas) $mesinha->mostraMesa();
+    foreach ($todasAsMesas as $mesinha) {
+        $mesaProvisoria = new Mesa();
+
+        //Código provisório. Quando o faker for tirado, tudo poderá ser feito pelo construtor
+        $mesaProvisoria->nome = $mesinha->nome;
+        $mesaProvisoria->mestre = $mesinha->mestre;
+        $mesaProvisoria->endereco = $mesinha->endereco;
+        $mesaProvisoria->sinopse = $mesinha->sinopse;
+        $mesaProvisoria->genero = $mesinha->genero;
+        $mesaProvisoria->sistema = $mesinha->sistema;
+        //Fim do código provisório
+        
+        //var_dump($mesaProvisoria);
+        $mesaProvisoria->mostraMesa($mesaProvisoria); ?>
+        <form method="post" action="pgMesa.php">
+            <button type="submit">Detalhes</button>
+        </form> <?php
+    }
 }
 ?>
