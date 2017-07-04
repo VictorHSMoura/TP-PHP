@@ -4,6 +4,7 @@ class Mesa {
     static $numMesas =0;
 
     var $id;
+    var $public;
     var $nome;
     var $mestre;
     var $endereco;
@@ -31,6 +32,7 @@ class Mesa {
         $faker = Faker\Factory::create();
         $this->id = $numMesas;
         $numMesas++;
+        $this->public = TRUE;
         $this->nome = $faker->name;
         $this->mestre = $faker->name;
         $this->endereco = $faker->address;

@@ -1,5 +1,6 @@
 <!-- Página principal. Mostra o usuário logado, as notificaçÕes dele, sua mesas, a busca de mesas e a opção de criar mesas -->
 
+<!-- SÓ FUNCIONA COM O FAKER NA PASTA ESPECIFICADA -->
 <!-- Precisamos melhorar *demais* o CSS -->
 <?php require "mesas.inc"; ?>
 <!DOCTYPE>
