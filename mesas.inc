@@ -11,6 +11,6 @@ function listaMesas(){
     while(!feof($arquivo)) $json .= fgets($arquivo);
     fclose($arquivo);
     $todasAsMesas = json_decode($json);
-    foreach ($todasAsMesas as $mesinha) $mesinha->mostraMesa();
+    foreach ($mesinha as $todasAsMesas) $mesinha->mostraMesa();
 }
 ?>

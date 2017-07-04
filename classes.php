@@ -27,9 +27,7 @@ class Mesa {
 
     //Construct provisório com o faker
     function __construct(){
-        echo "construindo";
-        require_once '../_Bibiotecas/Faker/src/autoload.php';
-        echo "deu bom";
+        require_once '../_BIBLIOTECAS/Faker/src/autoload.php';
         $faker = Faker\Factory::create();
         $this->id = $numMesas;
         $numMesas++;
@@ -38,13 +36,14 @@ class Mesa {
         $this->endereco = $faker->address;
         $this->sinopse = $faker->text;
         $this->genero = $faker->name;
-        $this->sistema = $faker->name;;
+        $this->sistema = $faker->name;
+        $this->mostraMesa();
     }
 
     function mostraMesa(){ //Exibição resumida da mesa: apenas nome, endereço e sinopse
         ?>
         <h3><?=$this->nome?></h3>
-        <h4>Endereço: </h4><p><?=$this->endereco?></p>
+        <p><strong>Endereço: </strong><?=$this->endereco?></p>
         <p><?=$this->sinopse?></p>
         <?php
     }
