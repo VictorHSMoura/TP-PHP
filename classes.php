@@ -30,8 +30,10 @@ class Mesa {
     function __construct(){
         require_once '../_BIBLIOTECAS/Faker/src/autoload.php';
         $faker = Faker\Factory::create();
-        $this->id = $numMesas;
-        $numMesas++;
+        $this->id = Mesa::$numMesas;
+        echo Mesa::$numMesas;
+        Mesa::$numMesas++;
+        echo Mesa::$numMesas;
         $this->public = TRUE;
         $this->nome = $faker->name;
         $this->mestre = $faker->name;
