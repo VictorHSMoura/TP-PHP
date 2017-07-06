@@ -1,8 +1,6 @@
 <!-- Declaração das classes mesa e usuário -->
 <?php
 class Mesa {
-    static $numMesas =0;
-
     var $id;
     var $public;
     var $nome;
@@ -26,14 +24,24 @@ class Mesa {
     }
     */
 
+    function mesaGetNewId(){
+        $arquivo = fopen("DB/numerosDB.json", "r");
+        $json = "";
+        while(!feof($arquivo)) $json .= fgets($arquivo);
+        fclose($arquivo);
+        $meta = json_decode($json);
+        $meta->numeroMesas++;
+        $arquivo = fopen("DB/numerosDB.json", "w");
+        fwrite($arquivo, json_encode($meta, JSON_PRETTY_PRINT));
+        fclose($arquivo);
+        return $meta->numeroMesas;
+    }
+
     //Construct provisório com o faker
     function __construct(){
         require_once '../_BIBLIOTECAS/Faker/src/autoload.php';
         $faker = Faker\Factory::create();
-        $this->id = Mesa::$numMesas;
-        echo Mesa::$numMesas;
-        Mesa::$numMesas++;
-        echo Mesa::$numMesas;
+        $this->id = $this->mesaGetNewId();
         $this->public = TRUE;
         $this->nome = $faker->name;
         $this->mestre = $faker->name;
@@ -53,8 +61,6 @@ class Mesa {
 }
 
 class Usuario {
-    static $numUsuarios = 0;
-
     var $id;
     var $nome;
     var $login;

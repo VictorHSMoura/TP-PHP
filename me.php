@@ -9,4 +9,4 @@
     <h2><strong>work in progress</strong></h2>    
 </body>
 </html>
-<?php include "footer.inc"; ?>
+<?php include "INC/footer.inc"; ?>

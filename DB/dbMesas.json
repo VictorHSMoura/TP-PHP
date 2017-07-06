@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "public": true,
+        "nome": "Michael Russel",
+        "mestre": "Charlene Harris",
+        "endereco": "949 Ryder Centers Apt. 238\nAvisville, KS 47000",
+        "sinopse": "Nihil quis iure voluptates sunt ratione animi repellendus. Nihil ratione aspernatur tempore voluptatem suscipit deserunt.",
+        "genero": "Dr. Gerry Price PhD",
+        "sistema": "Thomas Kertzmann",
+        "jogadores": null
+    },
+    {
+        "id": 2,
+        "public": true,
+        "nome": "Vernice Pfeffer",
+        "mestre": "Prof. Miguel Goldner DVM",
+        "endereco": "903 Rohan Ville\nSouth Alenestad, IL 76792",
+        "sinopse": "Reprehenderit in eum magnam sequi cupiditate et optio dolore. Et tenetur amet excepturi. Magni et voluptatem recusandae aperiam.",
+        "genero": "Lelia Price",
+        "sistema": "Estefania Mraz",
+        "jogadores": null
+    }
+]

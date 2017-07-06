@@ -1,21 +1,26 @@
+<?php
+ob_start();
+session_start();
+require "INC/mesas.inc";?>
+
 <!-- Página principal. Mostra o usuário logado, as notificaçÕes dele, sua mesas, a busca de mesas e a opção de criar mesas -->
 
 <!-- SÓ FUNCIONA COM O FAKER NA PASTA ESPECIFICADA -->
 <!-- Precisamos melhorar *demais* o CSS -->
-<?php require "mesas.inc"; ?>
+
 <!DOCTYPE>
 <html>
     <head>
         <title>GameMaster</title>
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css"></link>
+        <link rel="stylesheet" type="text/css" href="STYLE/style.css"></link>
     </head>
     <body>
         <div class="coluna sidebar">
             <div class="title">
                 <!-- Essa seção tá bagunçada
                         Eu queria foto, nome à direita da foto e link embaixo -->
-                <img src="fotaPerfil.jpeg" class="ftPerfil">                
+                <img src="STYLE/fotaPerfil.jpeg" class="ftPerfil">                
                 <h2 class="nomePerfil">Shoveler</h2>
                 <form method="get" action="me.php">
                     <button type="submit">Ver perfil</button>
@@ -41,12 +46,12 @@
             <div class="title">
             <h2>Suas notificações:</h2>
             <ul>
-                <li>Horário de Mesa 1 foi alterado</li>
-                <li>Jogador _D4rk_S0rc3r3r_ saiu da mesa 2</li>
-                <li>O mestre Krysvera te convidou para a mesa 4</li>
+                <li>Horário de <a href="pgMesa.php">Mesa 1</a> foi alterado</li>
+                <li>Jogador _D4rk_S0rc3r3r_ saiu da <a href="pgMesa.php">Mesa 3</a></li>
+                <li>O mestre Krysvera te convidou para a <a href="pgMesa.php">Mesa 4</a></li>
             </ul>
             </div>
         </div>
     </body>
-    <?php include "footer.inc"; ?>
+    <?php include "INC/footer.inc"; ?>
 </html>
