@@ -1,37 +1,30 @@
-<!-- Página para criação de novas mesas -->
-<?php
+<?php 
+session_start();
+
+//Página para criação de novas mesas
+
 require "classes.php";
-echo "1";
-$arquivo = fopen("dbMesas.json", "r");
-echo "2";
+$arquivo = fopen("DB/dbMesas.json", "r");
 $json = "";
-echo "3";
 while(!feof($arquivo)) $json .= fgets($arquivo);
-echo "4";
 fclose($arquivo);
-echo "5";
 $todasAsMesas = json_decode($json);
-echo "6";
 $novaMesa = new Mesa();
-echo "7";
 array_push($todasAsMesas, $novaMesa);
-echo "8";
-$arquivo = fopen("dbMesas.json", "w");
-echo "9";
+$arquivo = fopen("DB/dbMesas.json", "w");
 fwrite($arquivo, json_encode($todasAsMesas, JSON_PRETTY_PRINT));
-echo "0";
 fclose($arquivo);
-echo "missao dada eh missao cumprida";
 ?>
 <!DOCTYPE>
 <html>
     <head>
         <title>Nova mesa</title>
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     </head>
     <body>
         <h1>Página para criar novas mesas</h1>
         <h2><strong>WORK IN PROGRESS</strong></h2>
         <h2>Enquanto você não estava olhando, o faker fez o trabalho. Volte e admire os resultados</h2>        
     </body>
-    <?php include "footer.inc"; ?>
+    <?php include "INC/footer.inc"; ?>
 </html>

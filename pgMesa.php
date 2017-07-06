@@ -3,10 +3,11 @@
 <html>
     <head>
         <title>Mesa genérica</title>
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     </head>
 <body>
     <h1>Página de uma mesa genérica</h1>
     <h2><strong>work in progress</strong></h2>    
 </body>
 </html>
-<?php include "footer.inc"; ?>
+<?php include "INC/footer.inc"; ?>

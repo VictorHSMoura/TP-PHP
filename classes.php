@@ -1,9 +1,8 @@
 <!-- Declaração das classes mesa e usuário -->
 <?php
 class Mesa {
-    static $numMesas =0;
-
     var $id;
+    var $public;
     var $nome;
     var $mestre;
     var $endereco;
@@ -25,34 +24,43 @@ class Mesa {
     }
     */
 
+    function mesaGetNewId(){
+        $arquivo = fopen("DB/numerosDB.json", "r");
+        $json = "";
+        while(!feof($arquivo)) $json .= fgets($arquivo);
+        fclose($arquivo);
+        $meta = json_decode($json);
+        $meta->numeroMesas++;
+        $arquivo = fopen("DB/numerosDB.json", "w");
+        fwrite($arquivo, json_encode($meta, JSON_PRETTY_PRINT));
+        fclose($arquivo);
+        return $meta->numeroMesas;
+    }
+
     //Construct provisório com o faker
     function __construct(){
-        echo "construindo";
-        require_once '../_Bibiotecas/Faker/src/autoload.php';
-        echo "deu bom";
+        require_once '../_BIBLIOTECAS/Faker/src/autoload.php';
         $faker = Faker\Factory::create();
-        $this->id = $numMesas;
-        $numMesas++;
+        $this->id = $this->mesaGetNewId();
+        $this->public = TRUE;
         $this->nome = $faker->name;
         $this->mestre = $faker->name;
         $this->endereco = $faker->address;
         $this->sinopse = $faker->text;
         $this->genero = $faker->name;
-        $this->sistema = $faker->name;;
+        $this->sistema = $faker->name;
     }
 
-    function mostraMesa(){ //Exibição resumida da mesa: apenas nome, endereço e sinopse
+    function mostraMesa($mesa){ //Exibição resumida da mesa: apenas nome, endereço e sinopse
         ?>
-        <h3><?=$this->nome?></h3>
-        <h4>Endereço: </h4><p><?=$this->endereco?></p>
-        <p><?=$this->sinopse?></p>
+        <h3><?=$mesa->nome?></h3>
+        <p><strong>Endereço: </strong><?=$mesa->endereco?></p>
+        <p><?=$mesa->sinopse?></p>
         <?php
     }
 }
 
 class Usuario {
-    static $numUsuarios = 0;
-
     var $id;
     var $nome;
     var $login;
