@@ -1,7 +1,9 @@
 <?php
 session_start();
 //require "classes.php";
+
 //Funções para manipular e exibir conjuntos de mesas e jogadores
+
 //TODA FUNÇÃO QUE TRABALHE COM UMA MESA OU JOGADOR INDIVIDUAL DEVE SER DA CLASSE RESPECTIVA
 //APENAS FUNÇÕES QUE LIDEM COM CONJUNTOS DE AQUI
 function listaMesas(){
