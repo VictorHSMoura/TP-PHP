@@ -1,7 +1,7 @@
 <?php
 ob_start();
 session_start();
-require "INC/mesas.inc";?>
+require "INC/funcoes.inc";?>
 <!-- Página principal. Mostra o usuário logado, as notificaçÕes dele, sua mesas, a busca de mesas e a opção de criar mesas -->
 
 <!-- SÓ FUNCIONA COM O FAKER NA PASTA ESPECIFICADA -->
@@ -18,34 +18,10 @@ require "INC/mesas.inc";?>
     </head>
     <body>
         <div class="container-fluid">
-            <div class="sidebar col-sm-2">
-                <div class="title">
-                    <!-- Essa seção tá bagunçada
-                            Eu queria foto, nome à direita da foto e link embaixo -->
-                    <div class="card">
-                        <img src="STYLE/fotaPerfil.jpeg" alt="Avatar" style="width:100%">
-                        <div class="container">
-                            <h4 class="fonteBranca"><b>Shoveler</b></h4>
-                        </div>
-                    </div>
-                    <!--<img src="fotaPerfil.jpeg" class="ftPerfil">                
-                    <h3 class="nomePerfil">Shoveler</h3>-->
-                    <div class="perfil">
-                        <form class="pagePerfil" method="get" action="me.php">
-                            <button type="submit">Ver perfil</button>
-                        </form>
-                        <h3>Minhas mesas:</h3>
-                        <ul>
-                            <li><a href="pgMesa.php">Mesa 1</a></li>
-                            <li><a href="pgMesa.php">Mesa 2</a></li>
-                            <li><a href="pgMesa.php">Mesa 3</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-7">
+            <? require "INC/userSideBar.inc"; ?>
+            <div class="col-sm-7 centerbar">
                 <form method="get" action="novaMesa.php">
-                    <button type="submit">Criar mesa</button>
+                    <button type="submit" class="btn btn-primary btnCriarMesa">Criar mesa</button>
                 </form>
                 <div class="title">
                     <h2 class="center">Mesas na área:</h2>
